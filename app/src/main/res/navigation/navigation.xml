@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/mainFragment">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="kz.example.statesharedflows.MainActivity"
+        android:label="Main Activity" />
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="kz.example.statesharedflows.ui.main.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/main_fragment">
+        <action
+            android:id="@+id/action_mainFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="kz.example.statesharedflows.ui.second.SecondFragment"
+        android:label="second_fragment"
+        tools:layout="@layout/second_fragment" />
+</navigation>
